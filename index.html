@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Wellness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <h1 class="display-3 text-center p-4 mt-4">Your Daily Dose of Wellness</h1>
+    <div class="container-fluid p-3 my-5 bg-light bg-gradient">
+        <h2 class="text-center mb-3">Sunrise and Sunset</h2>
+        <div class="row mb-2 gx-3 gy-2 d-flex justify-content-center align-items-center">
+            <div class="col-auto">
+                <label for="inputlocation">Please enter your city</label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="inputlocation" class="form-control" placeholder="Enter location">
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-dark" type="submit" id="submitbutton">Submit</button>
+            </div>
+            <p class="text-danger text-center mb-0" id="cityWarning" style="display: none;">Please enter a valid city
+            </p>
+        </div>
+        <div class="form-text text-center">
+            Note times will be given in your local time.
+        </div>
+
+        <div class="row mt-4 justify-content-center">
+            <div class="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 text-center">
+                <i class="bi bi-sunrise" style="font-size: 3rem; color: #FCCD3B"></i>
+                <h2>Sunrise</h2>
+                <p class="fs-4" id="sunrise">00:00</p>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+                <i class="bi bi-sunset" style="font-size: 3rem; color:#FBA641"></i>
+                <h2>Sunset</h2>
+                <p class="fs-4" id="sunset">00:00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3 mb-5">
+        <h2 class="text-center">Inspirational quote of the day</h2>
+        <figure class="text-center my-5">
+            <blockquote class="blockquote">
+                <p id="quote">A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer pt-2" id="author">
+                Someone famous in
+            </figcaption>
+        </figure>
+    </div>
+
+    <div class="container-fluid py-3 bg-light mb-5">
+        <h2 class="text-center">Horoscope</h2>
+        <div class="row my-4 justify-content-center">
+            <div class="col-auto">
+                <select class="form-select" aria-label="Select star sign" id="starSignSelect">
+                    <option selected>Select your star sign from the dropdown</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Taurus">Taurus</option>
+                    <option value="Gemini">Gemini</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Scorpio">Scorpio</option>
+                    <option value="Sagittarius">Sagittarius</option>
+                    <option value="Capricorn">Capricorn</option>
+                    <option value="Aquarius">Aquarius</option>
+                    <option value="Pisces">Pisces</option>
+                </select>
+            </div>
+        </div>
+        <div class="row m-3 align-items-center d-block text-center">
+            <div class="col-lg-6 mx-auto py-4">
+                <h2 id="starSign"></h2>
+                <p id="date-range"></p>
+                <p id="dailyHoroscope"></p>
+                <p id="lucky-time"></p>
+            </div>
+            <figure class="figure col-md-6">
+                <img src="" class="figure-img rounded img-fluid" id="NASAimg">
+                <figcaption class="figure-caption" id="figcaption"></figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script type='module' src="./script.js"></script>
+</body>
+
+</html>
