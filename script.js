@@ -100,7 +100,11 @@ const getHoroscope = () => {
       return res.json();
     })
     .then((res) => {
-      figCaption.innerHTML = "&copy" + res.copyright + " - " + res.title;
+      if (res.copyright === undefined) {
+        figCaption.innerHTML = res.title;
+      } else {
+        figCaption.innerHTML = "&copy" + res.copyright + " - " + res.title;
+      }
       NASAimg.src = res.url;
       NASAimg.alt = "NASA astronomy picture of the day";
     });
